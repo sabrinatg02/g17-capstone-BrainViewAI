@@ -1,0 +1,120 @@
+/* Import base theme */
+@import url('mainStyles.css');
+
+/* Contact Us page styles */
+.content {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+h1 {
+  font-size: 30px;
+  color: #005da9;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 0.1px;
+}
+
+.contact-description {
+  font-size: 17px;
+  color: #000000;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: auto; 
+}
+
+.contact-form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form .form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+}
+
+.contact-form label {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 8px;
+  font-weight: 600;
+  text-align: left; 
+  width: 100%;
+}
+
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  outline: none;
+  height: 160px;
+  resize: vertical;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form textarea:focus {
+  border-color: #008cff;
+  box-shadow: 0 0 6px rgba(0, 140, 255, 0.3);
+}
+
+.contact-form button {
+  padding: 14px 25px;
+  background: #008cff;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  width: 100%;
+  margin-top: 20px;
+  letter-spacing: 1px;
+}
+
+.contact-form button:hover {
+  background: #006bb3;
+  transform: translateY(-2px);
+}
+
+.contact-form button:active {
+  transform: translateY(2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .content {
+    padding: 20px;
+  }
+
+  .contact-form {
+    padding: 30px;
+    margin-top: 15px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  p1 {
+    font-size: 14px;
+  }
+}
+
+
+
