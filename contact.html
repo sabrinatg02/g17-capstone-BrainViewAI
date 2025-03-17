@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Admin - BrainView AI</title>
+  <link rel="stylesheet" href="/g17-capstone-BrainViewAI-0.2-integration/static/css/contactStyles.css">
+  
+</head>
+<body id="app-container">
+  <header class="navbar">
+    <div class="logo">
+      <img src="/g17-capstone-BrainViewAI-0.2-integration/assets/logo.png" alt="BrainView AI Logo">
+      <span>BrainView AI</span>
+    </div>
+    <nav class="nav-links">
+      <a href="/g17-capstone-BrainViewAI-0.2-integration/main.html">CT Scan Analyzer</a>
+      <a href="/g17-capstone-BrainViewAI-0.2-integration/patientManager.html">Patient Manager</a>
+      <a href="/g17-capstone-BrainViewAI-0.2-integration/settings.html"class="active">User Settings</a>
+      <a href="/g17-capstone-BrainViewAI-0.2-integration/help.html" >Help</a>
+    </nav>
+    <div class="user-menu">
+      <button id="user-dropdown-btn">
+        <span class="user-avatar">JS</span>
+        <span class="user-name">Dr. Jhone Smith</span>
+      </button>
+      <div class="dropdown-menu" id="user-dropdown-menu">
+        <a href="#logout" id="logout-link">Log Out</a>
+      </div>
+    </div>
+  </header>
+
+
+  <main class="content">
+    <h1>Contact Us - BrainView AI</h1>
+    <span class="contact-description">
+      If you have any questions, need assistance, or wish to report an issue, <br> 
+      please use the form below to reach our admin team. We’re here to help and will respond promptly!
+    </span>
+
+
+    <!-- Contact Form -->
+    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+      <!-- Web3Forms Hidden Fields -->
+      <input type="hidden" name="access_key" value="65dc801f-4538-4581-b13f-886d3e4d55de" />
+      <input type="hidden" name="subject" value="New Contact Form Submission from BrainView AI" />
+      <input type="hidden" name="from_name" value="BrainView AI Website" />
+      
+      <!-- Form Fields -->
+      <div class="form-group-container">
+        <div class="form-group">
+          <label for="email" class="form-label">Email</label>
+          <input id="email" name="email" class="form-input" placeholder="Your email" type="email" required />
+        </div>  
+
+        <br>
+
+        <div class="form-group">
+          <label for="message" class="form-label">Message</label>
+          <textarea class="form-textarea" id="message" name="message" placeholder="Your message" required></textarea>
+        </div>
+      </div>
+
+      <button class="form-submit" type="submit">Send Message</button>
+    </form>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2024 BrainView AI. All Rights Reserved</p>
+  </footer>
+
+  <script src="/g17-capstone-BrainViewAI-0.2-integration/static/js/contactadmin.js"></script>
+</body>
+</html>
