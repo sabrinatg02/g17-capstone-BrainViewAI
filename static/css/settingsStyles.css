@@ -1,7 +1,7 @@
 /* Import base theme */
 @import url('mainstyles.css');
 
-.content{
+.content {
     text-align: center;
     padding: 10px;
 }
@@ -45,11 +45,147 @@
   background-color: #d7e7ff;
 }
 
-/* Responsive Adjustments for Buttons */
-@media (max-width: 768px) {
-  .content .button-group .btn {
-    width: 100%;
-    text-align: center;
+/* Modal container */
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Darker semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0s 0.3s;
+}
+
+.popup-container.show {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0s;
+}
+
+/* Popup content styling */
+.popup-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 450px;
+  max-width: 90%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  position: relative;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Fade-in animation for modal */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
+
+/* Close button style */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #333;
+}
+
+/* Modal title */
+.popup-content h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+/* Form styling */
+.popup-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.popup-content label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+}
+
+.popup-content input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #333;
+  transition: border-color 0.3s ease;
+}
+
+.popup-content input:focus {
+  border-color: #008cff;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 140, 255, 0.1);
+}
+
+.popup-content button[type="submit"] {
+  background-color: #008cff;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.popup-content button[type="submit"]:hover {
+  background-color: #005fa3;
+}
+
+/* Error message styling */
+.popup-content .error-message {
+  color: #ff4d4d;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* YouTube video container */
+.youtube-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.youtube-container iframe {
+  width: 100%;
+  height: 450px;
+  max-width: 800px;
+  border-radius: 8px;
+}
+
+
 
