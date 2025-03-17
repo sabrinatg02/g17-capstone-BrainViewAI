@@ -37,6 +37,34 @@
       <button class="btn primary" id="contact-admin">Contact Admin</button></br>
       <button class="btn secondary" id="logout">Log Out</button>
     </div>
+    
+  <!-- Edit Profile Modal -->
+    <div id="editProfileModal" class="popup-container">
+      <div class="popup-content">
+        <span id="close-modal-btn" class="close-btn">&times;</span>
+        <h2>Edit/Update User Profile</h2>
+        <form id="edit-profile-form" action="update-handler.php" method="POST">
+          <label for="user-id">User ID:</label>
+          <input type="text" id="user-id" name="user_id" placeholder="Enter your user ID" autocomplete="off" required />
+
+          <label for="old-password">Old Password:</label>
+          <input type="password" id="old-password" name="old_password" placeholder="Enter your old password" autocomplete="new-password" required />
+
+          <label for="new-password">New Password:</label>
+          <input type="password" id="new-password" name="new_password" placeholder="Enter a new password" autocomplete="new-password" required />
+
+          <label for="confirm-password">Confirm New Password:</label>
+          <input type="password" id="confirm-password" name="confirm_password" placeholder="Confirm new password" autocomplete="new-password" required />
+
+      <button type="submit">Save Changes</button>
+    </form>
+  </div>
+</div>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/i7GidKRUzrY?si=DYimoVI9f2DtWYY7" 
+      title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+      picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+    </iframe>
   </main>
 
   <footer class="footer">
